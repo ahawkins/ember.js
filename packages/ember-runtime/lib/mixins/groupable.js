@@ -16,7 +16,7 @@ Ember.GroupableMixin = Ember.Mixin.create({
       this.insertItemGrouped(object);
     }, this);
 
-    this._super.apply(this, array, idx, removedCount, addedCount);
+    this._super.apply(this, [array, idx, removedCount, addedCount]);
   },
 
   contentArrayWillChange: function(array, idx, removedCount, addedCount) {
@@ -29,7 +29,7 @@ Ember.GroupableMixin = Ember.Mixin.create({
       this.removeItemGrouped(object);
     }, this);
 
-    this._super.apply(this, array, idx, removedCount, addedCount);
+    this._super.apply(this, [array, idx, removedCount, addedCount]);
   },
 
   insertItemGrouped: function(object) {
